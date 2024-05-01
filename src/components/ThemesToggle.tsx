@@ -6,10 +6,14 @@ import {
 } from "@/components/ui/dropdown-menu.tsx";
 import { Button } from "@/components/ui/button.tsx";
 import { Sun } from "lucide-react";
-import { themes } from "@/utils/links.ts";
+import { Theme, themes } from "@/utils/types.ts";
+import { useThemeStore } from "@/store.ts";
 
 function ThemesToggle() {
-  //<Sun />
+  const setTheme = useThemeStore((state) => state.setTheme);
+  function onClick(theme: Theme): void {
+    setTheme(theme as Theme);
+  }
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -20,7 +24,11 @@ function ThemesToggle() {
       <DropdownMenuContent sideOffset={10}>
         {themes.map((theme) => {
           return (
-            <DropdownMenuItem key={theme} className={"capitalize"}>
+            <DropdownMenuItem
+              key={theme}
+              className={"capitalize"}
+              onClick={() => onClick(theme as Theme)}
+            >
               {theme}
             </DropdownMenuItem>
           );

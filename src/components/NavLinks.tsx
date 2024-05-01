@@ -1,4 +1,4 @@
-import { links } from "@/utils/links.ts";
+import { links } from "@/utils/types.ts";
 import { NavLink } from "react-router-dom";
 
 function NavLinks() {
@@ -11,6 +11,7 @@ function NavLinks() {
             className={({ isActive }) => {
               return `${isActive ? "text-primary" : ""}  capitalize tracking-wide`;
             }}
+            key={link.text}
           >
             {link.text}
           </NavLink>

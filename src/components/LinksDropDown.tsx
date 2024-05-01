@@ -6,7 +6,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu.tsx";
 import { AlignLeft } from "lucide-react";
-import { links } from "@/utils/links.ts";
+import { links } from "@/utils/types.ts";
 import { NavLink } from "react-router-dom";
 import { Button } from "@/components/ui/button.tsx";
 
@@ -14,7 +14,7 @@ function LinksDropDown() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className={"md:hidden"}>
-        <Button variant={"outline"} size={"icon"}>
+        <Button variant={"outline"} size={"icon"} asChild>
           <AlignLeft />
         </Button>
       </DropdownMenuTrigger>

@@ -1,9 +1,9 @@
-type Links = {
+type Types = {
   text: string;
   href: string;
 };
 
-export const links: Links[] = [
+export const links: Types[] = [
   {
     text: "Home",
     href: "/",
@@ -22,3 +22,11 @@ export const links: Links[] = [
   },
 ];
 export const themes: string[] = ["light", "dark", "system"];
+
+export type Theme = "dark" | "light" | "system";
+
+export type ThemeProviderProps = {
+  children: React.ReactNode;
+  defaultTheme?: Theme;
+  storageKey?: string;
+};
