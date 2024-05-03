@@ -7,9 +7,8 @@ function HomeLayout() {
     <>
       <Header />
       <Navbar />
-      <main className={"align-element"}>
-        <Outlet />
-      </main>
+
+      <Outlet />
     </>
   );
 }

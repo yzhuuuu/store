@@ -1,3 +1,8 @@
+import hero1 from "../assets/1.jpg";
+import hero2 from "../assets/2.jpg";
+import hero3 from "../assets/3.jpg";
+import hero4 from "../assets/4.jpg";
+import hero5 from "../assets/5.jpg";
 type Types = {
   text: string;
   href: string;
@@ -30,3 +35,5 @@ export type ThemeProviderProps = {
   defaultTheme?: Theme;
   storageKey?: string;
 };
+
+export const imageLinks: string[] = [hero1, hero2, hero3, hero4, hero5];
