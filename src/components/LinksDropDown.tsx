@@ -14,7 +14,7 @@ function LinksDropDown() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className={"md:hidden"}>
-        <Button variant={"outline"} size={"icon"} asChild>
+        <Button variant={"outline"} size={"icon"} asChild className={'p-1'}>
           <AlignLeft />
         </Button>
       </DropdownMenuTrigger>

@@ -6,7 +6,7 @@ function Logo() {
     <Link
       to={"/"}
       className={
-        "hidden md:flex justify-center items-center bg-primary p-2 rounded-lg text-white"
+        "hidden md:flex justify-center items-center bg-primary p-2 rounded-lg text-white "
       }
     >
       <Sofa className={"w-8 h-8"} />
