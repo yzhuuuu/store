@@ -3,6 +3,7 @@ import hero2 from "../assets/2.jpg";
 import hero3 from "../assets/3.jpg";
 import hero4 from "../assets/4.jpg";
 import hero5 from "../assets/5.jpg";
+
 type Types = {
   text: string;
   href: string;
@@ -37,3 +38,42 @@ export type ThemeProviderProps = {
 };
 
 export const imageLinks: string[] = [hero1, hero2, hero3, hero4, hero5];
+
+export type ProductTypes = {
+  id: number;
+  attributes: {
+    title: string;
+    company: string;
+    description: string;
+    featured: boolean;
+    createdAt: string;
+    updatedAt: string;
+    publishedAt: string;
+    category: string;
+    image: string;
+    price: string;
+    shipping: boolean;
+    colors: string[];
+  };
+};
+export type Pagination = {
+  page: number;
+  pageSize: number;
+  pageCount: number;
+  total: number;
+};
+export type MetaTypes = {
+  category: string[];
+  companies: string[];
+  pagination: Pagination;
+};
+export type FeaturedProductsType = {
+  data: ProductTypes[];
+  meta: MetaTypes;
+};
+export const formatAsDollars = (price: string | number): string => {
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+  }).format(Number(price) / 100);
+};
