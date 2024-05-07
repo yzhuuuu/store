@@ -63,7 +63,7 @@ export type Pagination = {
   total: number;
 };
 export type MetaTypes = {
-  category: string[];
+  categories: string[];
   companies: string[];
   pagination: Pagination;
 };
@@ -76,4 +76,10 @@ export const formatAsDollars = (price: string | number): string => {
     style: "currency",
     currency: "USD",
   }).format(Number(price) / 100);
+};
+export type Params = {
+  search?: string;
+  category?: string;
+  order?: string;
+  company?: string;
 };
