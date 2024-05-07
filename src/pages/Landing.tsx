@@ -2,10 +2,10 @@ import Hero from "@/components/Hero.tsx";
 import HeroCarousel from "@/components/HeroCarousel.tsx";
 import FeaturedProducts from "@/components/FeaturedProducts.tsx";
 import { useLoaderData } from "react-router-dom";
-import { FeaturedProductsType } from "@/utils/types.ts";
+import { ProductsType } from "@/utils/types.ts";
 
 function Landing() {
-  const loaderData = useLoaderData() as FeaturedProductsType;
+  const loaderData = useLoaderData() as ProductsType;
   const { data } = loaderData;
   return (
     <main className={"align-element py-24"}>
@@ -17,7 +17,7 @@ function Landing() {
     </main>
   );
 }
-export async function loader(): Promise<FeaturedProductsType> {
+export async function loader(): Promise<ProductsType> {
   const response = await fetch(
     "https://strapi-store-server.onrender.com/api/products?featured=true",
   );

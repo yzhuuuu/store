@@ -67,7 +67,7 @@ export type MetaTypes = {
   companies: string[];
   pagination: Pagination;
 };
-export type FeaturedProductsType = {
+export type ProductsType = {
   data: ProductTypes[];
   meta: MetaTypes;
 };

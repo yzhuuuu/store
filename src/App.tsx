@@ -1,8 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomeLayout from "@/pages/HomeLayout.tsx";
-import Landing , {loader as landingLoader}from "@/pages/Landing.tsx";
+import Landing, { loader as landingLoader } from "@/pages/Landing.tsx";
 import About from "@/pages/About.tsx";
-import Products from "@/pages/Products.tsx";
+import Products, { loader as productLoader } from "@/pages/Products.tsx";
 import Cart from "@/pages/Cart.tsx";
 import Register from "@/pages/Register.tsx";
 import Login from "@/pages/Login.tsx";
@@ -15,7 +15,7 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Landing />,
-        loader:landingLoader
+        loader: landingLoader,
       },
       {
         path: "about",
@@ -24,6 +24,7 @@ const router = createBrowserRouter([
       {
         path: "products",
         element: <Products />,
+        loader: productLoader,
       },
       {
         path: "cart",

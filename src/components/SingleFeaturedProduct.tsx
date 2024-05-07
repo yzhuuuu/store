@@ -18,9 +18,9 @@ function SingleFeaturedProduct({ product }: { product: ProductTypes }) {
             className={"w-full h-[14rem] rounded-md object-fill"}
           />
         </CardContent>
-        <CardHeader className={"text-center"}>
+        <CardHeader className={"text-center capitalize"}>
           <CardTitle>{product.attributes.title}</CardTitle>
-          <CardDescription>
+          <CardDescription className={"text-primary"}>
             {formatAsDollars(product.attributes.price)}
           </CardDescription>
         </CardHeader>

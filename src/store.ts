@@ -12,6 +12,7 @@ const initialTheme = () => {
   applyTheme(theme);
   return theme;
 };
+
 const useThemeStore = create<ThemeState>()((set) => ({
   theme: initialTheme(),
   setTheme: (theme: Theme) => {

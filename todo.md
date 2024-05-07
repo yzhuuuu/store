@@ -1,1 +1,3 @@
--[x] featured products
+-[x] featured products -[ ] products page
+
+-
