@@ -1,15 +1,19 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import HomeLayout from "@/pages/HomeLayout.tsx";
-import Landing, { loader as landingLoader } from "@/pages/Landing.tsx";
-import About from "@/pages/About.tsx";
-import Products, { loader as productLoader } from "@/pages/Products.tsx";
-import Cart from "@/pages/Cart.tsx";
-import Register from "@/pages/Register.tsx";
-import Login from "@/pages/Login.tsx";
+import Landing, { loader as landingLoader } from '@/pages/Landing.tsx';
+import ProductDetail, {
+  loader as productDetailLoader,
+} from './components/ProductDetail';
+import Products, { loader as productLoader } from '@/pages/Products.tsx';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+
+import About from '@/pages/About.tsx';
+import Cart from '@/pages/Cart.tsx';
+import HomeLayout from '@/pages/HomeLayout.tsx';
+import Login from '@/pages/Login.tsx';
+import Register from '@/pages/Register.tsx';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <HomeLayout />,
     children: [
       {
@@ -18,26 +22,31 @@ const router = createBrowserRouter([
         loader: landingLoader,
       },
       {
-        path: "about",
+        path: 'about',
         element: <About />,
       },
       {
-        path: "products",
+        path: 'products',
         element: <Products />,
         loader: productLoader,
       },
       {
-        path: "cart",
+        path: 'cart',
         element: <Cart />,
+      },
+      {
+        path: 'products/:id',
+        element: <ProductDetail />,
+        loader: productDetailLoader,
       },
     ],
   },
   {
-    path: "register",
+    path: 'register',
     element: <Register />,
   },
   {
-    path: "login",
+    path: 'login',
     element: <Login />,
   },
 ]);
