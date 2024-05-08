@@ -16,7 +16,7 @@ function PaginationContainer() {
   const { page, pageCount } = pagination;
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [currentPage, setCurrentPage] = useState(page);
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [, setSearchParams] = useSearchParams();
   function handleNext() {
     if (currentPage + 1 > pageCount) {
       return;

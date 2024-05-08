@@ -1,3 +1,5 @@
 -[x] featured products -[ ] products page
 
--[ ] filter component
+-[x] filter component 
+-[x] simple pagination
+-[x] single product pages
