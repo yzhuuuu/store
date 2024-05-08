@@ -6,8 +6,8 @@ import { Button } from "@/components/ui/button.tsx";
 
 function FilterContainer() {
   const { meta, params } = useLoaderData() as ProductsType & { params: Params };
-  const { search, category, company } = params;
-  console.log(search, category, company);
+  const { order, search, category, company } = params;
+
   return (
     <Form className="border rounded-md px-8 py-4 grid gap-x-4 gap-y-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center">
       {/* SEARCH */}
@@ -33,14 +33,20 @@ function FilterContainer() {
         options={meta.companies}
         defaultValue={company}
       />
+      <FormSelect
+        labelText="order by"
+        name="order"
+        options={["a-z", "z-a", "high", "low"]}
+        defaultValue={order}
+      />
       {/*<FormSelect labelText={"order"} />*/}
       <Button type={"submit"}>search</Button>
       <Button
         type="button"
         asChild
         size="sm"
-        variant="outline"
-        className="self-end mb-2"
+        variant="secondary"
+        className="bg-accent capitalize p-5"
       >
         <Link to="/products">reset</Link>
       </Button>

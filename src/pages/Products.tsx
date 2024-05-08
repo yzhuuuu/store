@@ -3,6 +3,7 @@ import { Params, ProductsType } from "@/utils/types.ts";
 import { LoaderFunction, useLoaderData } from "react-router-dom";
 import FilterContainer from "@/components/FilterContainer.tsx";
 import axios from "axios";
+import PaginationContainer from "@/components/PaginationContainer.tsx";
 
 function Products() {
   const loaderData = useLoaderData() as ProductsType;
@@ -11,6 +12,7 @@ function Products() {
     <main className={"align-element py-12"}>
       <FilterContainer />
       <ProductsContainer products={data} />
+      <PaginationContainer />
     </main>
   );
 }
