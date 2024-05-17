@@ -1,5 +1,5 @@
--[x] featured products -[ ] products page
+## 5/12/24 goal
 
--[x] filter component 
--[x] simple pagination
--[x] single product pages
+- [x] finish cart state
+- [ ] build cart page
+- [ ] finish functionality of cart

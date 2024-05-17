@@ -1,8 +1,8 @@
-import hero1 from "../assets/1.jpg";
-import hero2 from "../assets/2.jpg";
-import hero3 from "../assets/3.jpg";
-import hero4 from "../assets/4.jpg";
-import hero5 from "../assets/5.jpg";
+import hero1 from '../assets/1.jpg';
+import hero2 from '../assets/2.jpg';
+import hero3 from '../assets/3.jpg';
+import hero4 from '../assets/4.jpg';
+import hero5 from '../assets/5.jpg';
 
 type Types = {
   text: string;
@@ -11,25 +11,25 @@ type Types = {
 
 export const links: Types[] = [
   {
-    text: "Home",
-    href: "/",
+    text: 'Home',
+    href: '/',
   },
   {
-    text: "About",
-    href: "/about",
+    text: 'About',
+    href: '/about',
   },
   {
-    text: "Products",
-    href: "/products",
+    text: 'Products',
+    href: '/products',
   },
   {
-    text: "Cart",
-    href: "/cart",
+    text: 'Cart',
+    href: '/cart',
   },
 ];
-export const themes: string[] = ["light", "dark", "system"];
+export const themes: string[] = ['light', 'dark', 'system'];
 
-export type Theme = "dark" | "light" | "system";
+export type Theme = 'dark' | 'light' | 'system';
 
 export type ThemeProviderProps = {
   children: React.ReactNode;
@@ -55,6 +55,8 @@ export type ProductTypes = {
     shipping: boolean;
     colors: string[];
   };
+  amount?: number;
+  currentColor?: string;
 };
 export type Pagination = {
   page: number;
@@ -72,9 +74,9 @@ export type ProductsType = {
   meta: MetaTypes;
 };
 export const formatAsDollars = (price: string | number): string => {
-  return new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
   }).format(Number(price) / 100);
 };
 export type Params = {
